@@ -1,0 +1,11 @@
+#!/bin/sh
+# Husky pre-commit hook
+
+# 1. Run local secret scanning
+node scripts/check-secrets.js
+
+# 2. Run formatting validation (Prettier)
+npm run lint
+
+# 3. Run TypeScript compilation check
+npm run type-check

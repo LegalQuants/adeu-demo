@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+
+# Environment / Secrets
+.env
+.env.local
+
+# Operating system files
+.DS_Store
+
+# Generated demo outputs (do not commit redlined documents)
+*_redlined.docx
+
+# Local testing and verification
+tmp/
+

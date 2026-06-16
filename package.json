@@ -1,0 +1,27 @@
+{
+  "name": "adeu-legalquants-demo",
+  "version": "1.0.0",
+  "description": "Educational demo repository for LegalQuants Engineering Practices",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx index.ts",
+    "type-check": "tsc --noEmit",
+    "test": "tsx --test tests/**/*.test.ts",
+    "format": "prettier --write .",
+    "lint": "prettier --check .",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@adeu/core": "^1.10.0",
+    "@google/generative-ai": "^0.21.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "husky": "^9.1.7",
+    "prettier": "^3.4.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
