@@ -82,7 +82,7 @@ Think of your code like an office building:
    copy .env.example .env
    ```
    _(Note: `.env.example` contains no real keys, only placeholders like `your_gemini_api_key_here`. It is safe to share with others. Your real keys will live only in `.env`.)_
- 2. Open the newly created `.env` file in your text editor.
+2. Open the newly created `.env` file in your text editor.
 3. Replace `your_gemini_api_key_here` with your actual Gemini API key from [Google AI Studio](https://aistudio.google.com/).
 
 > **Why this matters for lawyers:** Real-world contracts contain sensitive client data, and API keys cost money. Recording your API keys directly inside your scripts and pushing them to GitHub can result in massive leaks. Placing keys in `.env` and registering `.env` in `.gitignore` ensures your credentials never leave your computer.
