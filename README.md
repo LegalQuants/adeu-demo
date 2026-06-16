@@ -1,6 +1,6 @@
 # LegalQuants Engineering Practices: Agentic NDA Redlining Demo ⚖️🤖
 
-Welcome to the official demo repository for the upcoming webinar: **"LegalQuants Engineering Practices - Fireside Chat with[Mikko](https://github.com/mkorpela/)."**
+Welcome to the official demo repository for the upcoming webinar: **"LegalQuants Engineering Practices - Fireside Chat with [Mikko](https://github.com/mkorpela/)."**
 
 This repository is designed specifically for lawyers, paralegals, and legal operations professional who are currently using AI to write local scripts to automate legal work but lacking the guardrails, security, and scalability of professional software engineering.
 
