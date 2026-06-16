@@ -1,15 +1,15 @@
 # LegalQuants Engineering Practices: Agentic NDA Redlining Demo ⚖️🤖
 
-Welcome to the official demo repository for the upcoming webinar: **"LegalQuants Engineering Practices - Fireside Chat with Mikko."**
+Welcome to the official demo repository for the upcoming webinar: **"LegalQuants Engineering Practices - Fireside Chat with[Mikko](https://github.com/mkorpela/)."**
 
-This repository is designed specifically for lawyers, paralegals, and legal operations professional who are currently **"vibe coding"**—writing local scripts to automate legal work but lacking the guardrails, security, and scalability of professional software engineering.
+This repository is designed specifically for lawyers, paralegals, and legal operations professional who are currently using AI to write local scripts to automate legal work but lacking the guardrails, security, and scalability of professional software engineering.
 
 In this demo, we scale a basic legal automation script into a shared, robust, and secure codebase by implementing four key professional engineering guardrails:
 
 1. **Secret Management:** Safeguarding API keys using `.env` files and `.gitignore`.
 2. **Local Git Hygiene:** Employing `Husky` pre-commit hooks to catch broken code and API key leaks before committing.
 3. **Continuous Integration (CI):** Automating code validation with `GitHub Actions` to protect the shared main branch.
-4. **Agentic Redlining:** A lightweight Node.js script using **`@adeu/core`** and **Gemini 3.5 Flash** to review and redline an NDA against a legal compliance playbook, producing a native Microsoft Word document with tracked changes.
+4. **Agentic Redlining:** A lightweight Node.js script using [**`@adeu/core`**](https://github.com/dealfluence/adeu) and **Gemini 3.5 Flash** to review and redline an NDA against a legal compliance playbook, producing a native Microsoft Word document with tracked changes.
 
 ---
 
@@ -56,7 +56,7 @@ Clone this repository and run the setup command in your terminal:
 npm install
 ```
 
-This command installs the required dependencies (including the official `@adeu/core` package) and automatically initializes and configures `Husky` git hooks.
+This command installs the required dependencies (including the official [**`@adeu/core`**](https://github.com/dealfluence/adeu) package) and automatically initializes and configures `Husky` git hooks.
 
 ### 3. Setup Secret Management (The Leak Guard)
 
@@ -100,7 +100,7 @@ Watch the console as your agent:
 1. Parses the OpenXML structure of your Word document into token-efficient **CriticMarkup** (a standard Markdown format used to represent text insertions and deletions).
 2. Reads your corporate compliance playbook.
 3. Invokes **Gemini 3.5 Flash** via structured JSON output mode to identify clauses deviating from your guidelines.
-4. Applies those corrections back into the Word document as native **Tracked Changes** and **Comment Bubbles** using `@adeu/core`'s `RedlineEngine`.
+4. Applies those corrections back into the Word document as native **Tracked Changes** and **Comment Bubbles** using [**`@adeu/core`**](https://github.com/dealfluence/adeu)'s `RedlineEngine`.
 5. Outputs a final, native Word document named **`contract_redlined.docx`**.
 
 ---
@@ -164,7 +164,7 @@ Open `index.ts` to see how clean and legible professional code can be:
    });
    ```
 3. **The Redline Engine:**
-   We pass Gemini's compliance edits into `@adeu/core`'s virtual DOM engine. It does the heavy lifting of editing the underlying Microsoft Word OpenXML, marking edits as a tracked change from "Adeu AI Compliance Reviewer" and dropping in comment bubbles:
+   We pass Gemini's compliance edits into [**`@adeu/core`**](https://github.com/dealfluence/adeu)'s virtual DOM engine. It does the heavy lifting of editing the underlying Microsoft Word OpenXML, marking edits as a tracked change from "Adeu AI Compliance Reviewer" and dropping in comment bubbles:
    ```typescript
    const doc = await DocumentObject.load(contractBuffer);
    const engine = new RedlineEngine(doc, "Adeu AI Compliance Reviewer");
